@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\bin\Debug\WALK-IN PROJECT.exe.config
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\bin\Debug\WALK-IN PROJECT.exe
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\bin\Debug\WALK-IN PROJECT.pdb
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PROJECT.csprojAssemblyReference.cache
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Properties.Resources.resources
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PROJECT.csproj.GenerateResource.cache
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PROJECT.exe
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PROJECT.pdb
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Form1.resources
