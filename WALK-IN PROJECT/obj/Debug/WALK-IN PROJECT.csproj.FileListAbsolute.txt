@@ -7,3 +7,8 @@ C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PRO
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PROJECT.exe
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PROJECT.pdb
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Form1.resources
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PROJECT.csproj.CopyComplete

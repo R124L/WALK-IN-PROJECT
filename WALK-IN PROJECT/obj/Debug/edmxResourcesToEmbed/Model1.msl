@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hotelModelStoreContainer" CdmEntityContainer="hotelEntities1">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="hotelModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="NIK" ColumnName="NIK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashFlow">
+      <EntityTypeMapping TypeName="hotelModel.CashFlow">
+        <MappingFragment StoreEntitySet="CashFlow">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tanggal" ColumnName="Tanggal" />
+          <ScalarProperty Name="Sumber" ColumnName="Sumber" />
+          <ScalarProperty Name="Jumlah" ColumnName="Jumlah" />
+          <ScalarProperty Name="Jenis" ColumnName="Jenis" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kamar">
+      <EntityTypeMapping TypeName="hotelModel.Kamar">
+        <MappingFragment StoreEntitySet="Kamar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NoKamar" ColumnName="NoKamar" />
+          <ScalarProperty Name="Tipe" ColumnName="Tipe" />
+          <ScalarProperty Name="Fasilitas" ColumnName="Fasilitas" />
+          <ScalarProperty Name="Kapasitas" ColumnName="Kapasitas" />
+          <ScalarProperty Name="Harga" ColumnName="Harga" />
+          <ScalarProperty Name="Tersedia" ColumnName="Tersedia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Karyawan">
+      <EntityTypeMapping TypeName="hotelModel.Karyawan">
+        <MappingFragment StoreEntitySet="Karyawan">
+          <ScalarProperty Name="NIK" ColumnName="NIK" />
+          <ScalarProperty Name="Nama" ColumnName="Nama" />
+          <ScalarProperty Name="JenisKelamin" ColumnName="JenisKelamin" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="Telp" ColumnName="Telp" />
+          <ScalarProperty Name="TglLahir" ColumnName="TglLahir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservasi">
+      <EntityTypeMapping TypeName="hotelModel.Reservasi">
+        <MappingFragment StoreEntitySet="Reservasi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KodeReservasi" ColumnName="KodeReservasi" />
+          <ScalarProperty Name="NoIdTamu" ColumnName="NoIdTamu" />
+          <ScalarProperty Name="UsernameAdmin" ColumnName="UsernameAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tamu">
+      <EntityTypeMapping TypeName="hotelModel.Tamu">
+        <MappingFragment StoreEntitySet="Tamu">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NoIdTamu" ColumnName="NoIdTamu" />
+          <ScalarProperty Name="Nama" ColumnName="Nama" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="Telp" ColumnName="Telp" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TandaPengenal" ColumnName="TandaPengenal" />
+          <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="NoKamar" ColumnName="NoKamar" />
+          <ScalarProperty Name="JumlahTamu" ColumnName="JumlahTamu" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

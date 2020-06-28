@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hotelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NIK" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Karyawan" Relationship="Self.FK_Admin_ToKaryawan" FromRole="Admin" ToRole="Karyawan" />
+    <NavigationProperty Name="CashFlow" Relationship="Self.FK_CashFlow_ToAdmin" FromRole="Admin" ToRole="CashFlow" />
+    <NavigationProperty Name="Reservasi" Relationship="Self.FK_Reservasi_ToAdmin" FromRole="Admin" ToRole="Reservasi" />
+  </EntityType>
+  <EntityType Name="CashFlow">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tanggal" Type="DateTime" Precision="3" />
+    <Property Name="Sumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Jumlah" Type="Int32" />
+    <Property Name="Jenis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Admin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Admin1" Relationship="Self.FK_CashFlow_ToAdmin" FromRole="CashFlow" ToRole="Admin" />
+  </EntityType>
+  <EntityType Name="Kamar">
+    <Key>
+      <PropertyRef Name="NoKamar" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NoKamar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tipe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fasilitas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kapasitas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Harga" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Tersedia" Type="Boolean" />
+    <NavigationProperty Name="Tamu" Relationship="Self.FK_Tamu_ToKamar" FromRole="Kamar" ToRole="Tamu" />
+  </EntityType>
+  <EntityType Name="Karyawan">
+    <Key>
+      <PropertyRef Name="NIK" />
+    </Key>
+    <Property Name="NIK" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Nama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JenisKelamin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Alamat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telp" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="TglLahir" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Admin" Relationship="Self.FK_Admin_ToKaryawan" FromRole="Karyawan" ToRole="Admin" />
+  </EntityType>
+  <EntityType Name="Reservasi">
+    <Key>
+      <PropertyRef Name="KodeReservasi" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KodeReservasi" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NoIdTamu" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="UsernameAdmin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Admin" Relationship="Self.FK_Reservasi_ToAdmin" FromRole="Reservasi" ToRole="Admin" />
+    <NavigationProperty Name="Tamu" Relationship="Self.FK_Reservasi_ToTamu" FromRole="Reservasi" ToRole="Tamu" />
+  </EntityType>
+  <EntityType Name="Tamu">
+    <Key>
+      <PropertyRef Name="NoIdTamu" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NoIdTamu" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Nama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Alamat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telp" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TandaPengenal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CheckIn" Type="DateTime" Precision="0" />
+    <Property Name="CheckOut" Type="DateTime" Precision="0" />
+    <Property Name="NoKamar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JumlahTamu" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kamar" Relationship="Self.FK_Tamu_ToKamar" FromRole="Tamu" ToRole="Kamar" />
+    <NavigationProperty Name="Reservasi" Relationship="Self.FK_Reservasi_ToTamu" FromRole="Tamu" ToRole="Reservasi" />
+  </EntityType>
+  <Association Name="FK_Admin_ToKaryawan">
+    <End Role="Karyawan" Type="Self.Karyawan" Multiplicity="0..1" />
+    <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Karyawan">
+        <PropertyRef Name="NIK" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="NIK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CashFlow_ToAdmin">
+    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="CashFlow" Type="Self.CashFlow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="Username" />
+      </Principal>
+      <Dependent Role="CashFlow">
+        <PropertyRef Name="Admin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservasi_ToAdmin">
+    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="Reservasi" Type="Self.Reservasi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="Username" />
+      </Principal>
+      <Dependent Role="Reservasi">
+        <PropertyRef Name="UsernameAdmin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tamu_ToKamar">
+    <End Role="Kamar" Type="Self.Kamar" Multiplicity="0..1" />
+    <End Role="Tamu" Type="Self.Tamu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kamar">
+        <PropertyRef Name="NoKamar" />
+      </Principal>
+      <Dependent Role="Tamu">
+        <PropertyRef Name="NoKamar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservasi_ToTamu">
+    <End Role="Tamu" Type="Self.Tamu" Multiplicity="0..1" />
+    <End Role="Reservasi" Type="Self.Reservasi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tamu">
+        <PropertyRef Name="NoIdTamu" />
+      </Principal>
+      <Dependent Role="Reservasi">
+        <PropertyRef Name="NoIdTamu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="hotelEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="CashFlow" EntityType="Self.CashFlow" />
+    <EntitySet Name="Kamar" EntityType="Self.Kamar" />
+    <EntitySet Name="Karyawan" EntityType="Self.Karyawan" />
+    <EntitySet Name="Reservasi" EntityType="Self.Reservasi" />
+    <EntitySet Name="Tamu" EntityType="Self.Tamu" />
+    <AssociationSet Name="FK_Admin_ToKaryawan" Association="Self.FK_Admin_ToKaryawan">
+      <End Role="Karyawan" EntitySet="Karyawan" />
+      <End Role="Admin" EntitySet="Admin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CashFlow_ToAdmin" Association="Self.FK_CashFlow_ToAdmin">
+      <End Role="Admin" EntitySet="Admin" />
+      <End Role="CashFlow" EntitySet="CashFlow" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservasi_ToAdmin" Association="Self.FK_Reservasi_ToAdmin">
+      <End Role="Admin" EntitySet="Admin" />
+      <End Role="Reservasi" EntitySet="Reservasi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tamu_ToKamar" Association="Self.FK_Tamu_ToKamar">
+      <End Role="Kamar" EntitySet="Kamar" />
+      <End Role="Tamu" EntitySet="Tamu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservasi_ToTamu" Association="Self.FK_Reservasi_ToTamu">
+      <End Role="Tamu" EntitySet="Tamu" />
+      <End Role="Reservasi" EntitySet="Reservasi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
