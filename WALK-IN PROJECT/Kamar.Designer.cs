@@ -1116,7 +1116,7 @@
             // 
             // bunifuDatepicker1
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.DarkCyan;
             this.bunifuDatepicker1.BorderRadius = 0;
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -1141,7 +1141,7 @@
             // 
             // bunifuDatepicker2
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuDatepicker2.BackColor = System.Drawing.Color.DarkCyan;
             this.bunifuDatepicker2.BorderRadius = 0;
             this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
             this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;

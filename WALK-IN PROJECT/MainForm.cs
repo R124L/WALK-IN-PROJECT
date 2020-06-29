@@ -19,7 +19,9 @@ namespace WALK_IN_PROJECT
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Login login = new Login();
             Tampilkan(Kamar.Instance);
+            login.ShowDialog();
         }
 
         private void btnKamar_Click(object sender, EventArgs e)
