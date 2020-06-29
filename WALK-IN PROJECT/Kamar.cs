@@ -112,9 +112,10 @@ namespace WALK_IN_PROJECT
 
         }
 
-        private void button74_Click(object sender, EventArgs e)
+        private void book_Click(object sender, EventArgs e)
         {
-
+            Reservasi reservasi = new Reservasi();
+            reservasi.ShowDialog();
         }
     }
 }

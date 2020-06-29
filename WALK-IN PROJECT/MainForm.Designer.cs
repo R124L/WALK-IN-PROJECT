@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelNav = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnTamu = new System.Windows.Forms.Button();
+            this.checkOut = new System.Windows.Forms.Button();
             this.btnReservasi = new System.Windows.Forms.Button();
             this.btnKamar = new System.Windows.Forms.Button();
             this.panelControl = new System.Windows.Forms.Panel();
@@ -70,17 +70,17 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(184)))), ((int)(((byte)(1)))));
-            this.label1.Location = new System.Drawing.Point(567, 35);
+            this.label1.Location = new System.Drawing.Point(533, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 47);
+            this.label1.Size = new System.Drawing.Size(385, 47);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Masker Hotel";
+            this.label1.Text = "HOTEL CALIFORNIA";
             // 
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panelNav.Controls.Add(this.btnLogout);
-            this.panelNav.Controls.Add(this.btnTamu);
+            this.panelNav.Controls.Add(this.checkOut);
             this.panelNav.Controls.Add(this.btnReservasi);
             this.panelNav.Controls.Add(this.btnKamar);
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Left;
@@ -105,21 +105,21 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
-            // btnTamu
+            // checkOut
             // 
-            this.btnTamu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            this.btnTamu.FlatAppearance.BorderSize = 0;
-            this.btnTamu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTamu.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnTamu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnTamu.Location = new System.Drawing.Point(0, 166);
-            this.btnTamu.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTamu.Name = "btnTamu";
-            this.btnTamu.Size = new System.Drawing.Size(301, 76);
-            this.btnTamu.TabIndex = 3;
-            this.btnTamu.Text = "Tamu";
-            this.btnTamu.UseVisualStyleBackColor = false;
-            this.btnTamu.Click += new System.EventHandler(this.btnTamu_Click);
+            this.checkOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.checkOut.FlatAppearance.BorderSize = 0;
+            this.checkOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkOut.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkOut.Location = new System.Drawing.Point(0, 166);
+            this.checkOut.Margin = new System.Windows.Forms.Padding(4);
+            this.checkOut.Name = "checkOut";
+            this.checkOut.Size = new System.Drawing.Size(301, 76);
+            this.checkOut.TabIndex = 3;
+            this.checkOut.Text = "Check Out";
+            this.checkOut.UseVisualStyleBackColor = false;
+            this.checkOut.Click += new System.EventHandler(this.checkOut_Click);
             // 
             // btnReservasi
             // 
@@ -133,7 +133,7 @@
             this.btnReservasi.Name = "btnReservasi";
             this.btnReservasi.Size = new System.Drawing.Size(301, 76);
             this.btnReservasi.TabIndex = 3;
-            this.btnReservasi.Text = "Check - In";
+            this.btnReservasi.Text = "Check In";
             this.btnReservasi.UseVisualStyleBackColor = false;
             this.btnReservasi.Click += new System.EventHandler(this.btnReservasi_Click);
             // 
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnKamar;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnTamu;
+        private System.Windows.Forms.Button checkOut;
         private System.Windows.Forms.Button btnReservasi;
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.Panel panelControl;

@@ -126,7 +126,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.button74 = new System.Windows.Forms.Button();
+            this.book = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1426,25 +1426,25 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "Fasilitas";
             // 
-            // button74
+            // book
             // 
-            this.button74.BackColor = System.Drawing.Color.LimeGreen;
-            this.button74.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button74.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button74.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button74.Location = new System.Drawing.Point(334, 652);
-            this.button74.Name = "button74";
-            this.button74.Size = new System.Drawing.Size(246, 44);
-            this.button74.TabIndex = 7;
-            this.button74.Text = "BOOK";
-            this.button74.UseVisualStyleBackColor = false;
-            this.button74.Click += new System.EventHandler(this.button74_Click);
+            this.book.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
+            this.book.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.book.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.book.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.book.Location = new System.Drawing.Point(334, 652);
+            this.book.Name = "book";
+            this.book.Size = new System.Drawing.Size(246, 44);
+            this.book.TabIndex = 7;
+            this.book.Text = "BOOK";
+            this.book.UseVisualStyleBackColor = false;
+            this.book.Click += new System.EventHandler(this.book_Click);
             // 
             // Kamar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button74);
+            this.Controls.Add(this.book);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.panel2);
@@ -1641,6 +1641,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button74;
+        private System.Windows.Forms.Button book;
     }
 }

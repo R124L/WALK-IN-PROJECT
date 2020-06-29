@@ -19,9 +19,7 @@ namespace WALK_IN_PROJECT
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Reservasi reservasi = new Reservasi();
             Tampilkan(Kamar.Instance);
-            reservasi.ShowDialog();
         }
 
         private void btnKamar_Click(object sender, EventArgs e)
@@ -34,9 +32,9 @@ namespace WALK_IN_PROJECT
             Tampilkan(CheckIn.Instance);
         }
 
-        private void btnTamu_Click(object sender, EventArgs e)
+        private void checkOut_Click(object sender, EventArgs e)
         {
-            Tampilkan(Tamu.Instance);
+            Tampilkan(CheckOut.Instance);
         }
 
         internal void Tampilkan(Control instance)

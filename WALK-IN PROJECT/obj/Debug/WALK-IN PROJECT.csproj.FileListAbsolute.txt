@@ -16,3 +16,5 @@ C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PRO
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Tamu.resources
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.CheckIn.resources
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Reservasi.resources
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Pembayaran.resources
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.CheckOut.resources
