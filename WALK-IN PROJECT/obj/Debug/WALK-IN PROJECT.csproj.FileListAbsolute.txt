@@ -13,3 +13,6 @@ C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\bin\Debug\EntityFrame
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK-IN PROJECT.csproj.CopyComplete
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Kamar.resources
 C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.MainForm.resources
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Tamu.resources
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.CheckIn.resources
+C:\Users\User\source\repos\WALK-IN PROJECT\WALK-IN PROJECT\obj\Debug\WALK_IN_PROJECT.Reservasi.resources

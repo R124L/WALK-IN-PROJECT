@@ -29,7 +29,6 @@ namespace WALK_IN_PROJECT
         public virtual DbSet<CashFlow> CashFlow { get; set; }
         public virtual DbSet<Kamar> Kamar { get; set; }
         public virtual DbSet<Karyawan> Karyawan { get; set; }
-        public virtual DbSet<Reservasi> Reservasi { get; set; }
         public virtual DbSet<Tamu> Tamu { get; set; }
     }
 }

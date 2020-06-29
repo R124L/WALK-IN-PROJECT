@@ -119,6 +119,7 @@
             this.btnTamu.TabIndex = 3;
             this.btnTamu.Text = "Tamu";
             this.btnTamu.UseVisualStyleBackColor = false;
+            this.btnTamu.Click += new System.EventHandler(this.btnTamu_Click);
             // 
             // btnReservasi
             // 
@@ -132,8 +133,9 @@
             this.btnReservasi.Name = "btnReservasi";
             this.btnReservasi.Size = new System.Drawing.Size(301, 76);
             this.btnReservasi.TabIndex = 3;
-            this.btnReservasi.Text = "Reservasi";
+            this.btnReservasi.Text = "Check - In";
             this.btnReservasi.UseVisualStyleBackColor = false;
+            this.btnReservasi.Click += new System.EventHandler(this.btnReservasi_Click);
             // 
             // btnKamar
             // 
@@ -172,6 +174,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Software Reservasi Hotel";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelHeader.ResumeLayout(false);

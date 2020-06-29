@@ -18,7 +18,6 @@ namespace WALK_IN_PROJECT
         public Admin()
         {
             this.CashFlow = new HashSet<CashFlow>();
-            this.Reservasi = new HashSet<Reservasi>();
         }
     
         public int Id { get; set; }
@@ -29,7 +28,5 @@ namespace WALK_IN_PROJECT
         public virtual Karyawan Karyawan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CashFlow> CashFlow { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Reservasi> Reservasi { get; set; }
     }
 }

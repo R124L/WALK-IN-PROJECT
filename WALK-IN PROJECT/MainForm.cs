@@ -19,15 +19,27 @@ namespace WALK_IN_PROJECT
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            tampilkan(Kamar.Instance);
+            Reservasi reservasi = new Reservasi();
+            Tampilkan(Kamar.Instance);
+            reservasi.ShowDialog();
         }
 
         private void btnKamar_Click(object sender, EventArgs e)
         {
-
+            Tampilkan(Kamar.Instance);
         }
 
-        internal void tampilkan(Control instance)
+        private void btnReservasi_Click(object sender, EventArgs e)
+        {
+            Tampilkan(CheckIn.Instance);
+        }
+
+        private void btnTamu_Click(object sender, EventArgs e)
+        {
+            Tampilkan(Tamu.Instance);
+        }
+
+        internal void Tampilkan(Control instance)
         {
             panelControl.Controls.Add(instance);
             instance.Dock = DockStyle.Fill;

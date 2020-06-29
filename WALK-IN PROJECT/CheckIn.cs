@@ -10,24 +10,23 @@ using System.Windows.Forms;
 
 namespace WALK_IN_PROJECT
 {
-    public partial class Tamu: UserControl
+    public partial class CheckIn : UserControl
     {
-        private static Tamu _instance;
-        public static Tamu Instance
+        private static CheckIn _instance;
+        public static CheckIn Instance
         {
             get
             {
-                if (_instance == null) _instance = new Tamu();
+                if (_instance == null) _instance = new CheckIn();
                 return _instance;
             }
         }
-
-        public Tamu()
+        public CheckIn()
         {
             InitializeComponent();
         }
 
-        private void Tamu_Load(object sender, EventArgs e)
+        private void CheckIn_Load(object sender, EventArgs e)
         {
 
         }
