@@ -12,6 +12,8 @@ namespace WALK_IN_PROJECT
 {
     public partial class MainForm : Form
     {
+        public bool logout { get; set; }
+        public string username { get; set; }
         public MainForm()
         {
             InitializeComponent();
@@ -19,9 +21,8 @@ namespace WALK_IN_PROJECT
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Login login = new Login();
             Tampilkan(Kamar.Instance);
-            login.ShowDialog();
+            txtUsername.Text = username + " (Admin)";
         }
 
         private void btnKamar_Click(object sender, EventArgs e)
@@ -44,6 +45,23 @@ namespace WALK_IN_PROJECT
             panelControl.Controls.Add(instance);
             instance.Dock = DockStyle.Fill;
             instance.BringToFront();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Login login = new Login();
+            login.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            this.Close();
+        }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

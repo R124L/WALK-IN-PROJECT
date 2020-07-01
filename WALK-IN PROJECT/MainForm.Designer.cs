@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelNav = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.panelHeader.Controls.Add(this.label2);
+            this.panelHeader.Controls.Add(this.txtUsername);
             this.panelHeader.Controls.Add(this.label1);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
@@ -53,17 +53,18 @@
             this.panelHeader.Size = new System.Drawing.Size(1440, 97);
             this.panelHeader.TabIndex = 0;
             // 
-            // label2
+            // txtUsername
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(1182, 56);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Rizal Iswandy (Admin)";
+            this.txtUsername.AutoSize = true;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtUsername.Location = new System.Drawing.Point(1119, 56);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(195, 24);
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "Rizal Iswandy (Admin)";
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // label1
             // 
@@ -104,6 +105,7 @@
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // checkOut
             // 
@@ -149,7 +151,7 @@
             this.btnKamar.Name = "btnKamar";
             this.btnKamar.Size = new System.Drawing.Size(301, 76);
             this.btnKamar.TabIndex = 3;
-            this.btnKamar.Text = "Kamar";
+            this.btnKamar.Text = "Dashboard";
             this.btnKamar.UseVisualStyleBackColor = false;
             this.btnKamar.Click += new System.EventHandler(this.btnKamar_Click);
             // 
@@ -176,6 +178,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Software Reservasi Hotel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
@@ -193,8 +196,8 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button checkOut;
         private System.Windows.Forms.Button btnReservasi;
-        private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.Panel panelControl;
+        internal System.Windows.Forms.Label txtUsername;
     }
 }
 

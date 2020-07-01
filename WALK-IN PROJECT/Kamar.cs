@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WALK_IN_PROJECT
 {
     public partial class Kamar: UserControl
     {
+        public bool kamarClick { get; set; }
+
         private static Kamar _instance;
         public static Kamar Instance
         {
@@ -29,93 +32,83 @@ namespace WALK_IN_PROJECT
 
         private void Kamar_Load(object sender, EventArgs e)
         {
+            kamarClick = true;
+            RoomHandler roomHandler = new RoomHandler();
+            roomHandler.ColorTersedia(this);
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button36_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuDatepicker2_onValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCheckbox1_OnChange(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
+            tglCheckIn.Value = DateTime.Today;
+            tglCheckOut.Value = DateTime.Today.AddDays(1);
         }
 
         private void book_Click(object sender, EventArgs e)
         {
+            DataReservasi dataReservasi = new DataReservasi();
+            RoomHandler roomHandler = new RoomHandler();
+            DateTime checkIn = tglCheckIn.Value;
+            DateTime checkOut = tglCheckOut.Value;
+            string nomorKamar = NomorKamar();
+            dataReservasi.InsertDataKamar(checkIn, checkOut, nomorKamar);
+
             Reservasi reservasi = new Reservasi();
+            reservasi.nomorKamar.Text = nomorKamar;
             reservasi.ShowDialog();
+            roomHandler.ColorTersedia(this);
+            foreach (Control control in Controls)
+            {
+                if (control is CheckBox)
+                {
+                    CheckBox checkBox = (CheckBox)control;
+                    checkBox.Checked = true;
+                }
+            }
+        }
+
+        private void tipeKamar_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            RoomHandler roomHandler = new RoomHandler();
+            if (!checkBox.Checked)
+            {
+                roomHandler.CheckedColor(checkBox.Text, this, Color.Gray, false);
+            }
+            else
+            {
+                roomHandler.CheckedColor(checkBox.Text, this, ColorTranslator.FromHtml("#18A05E"), true);
+            }
+        }
+
+        private void kamar_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            if (button.BackColor == Color.DarkOrange)
+            {
+                button.BackColor = ColorTranslator.FromHtml("#18A05E");
+                kamarClick = false;
+            }
+            else
+            {
+                button.BackColor = Color.DarkOrange;
+                kamarClick = true;
+            }
+        }
+
+        public string NomorKamar()
+        {
+            string nomorKamar = "";
+
+            foreach (Control control in Controls)
+            {
+                if (control is Button)
+                {
+                    Button button = (Button)control;
+                    if (button.BackColor == Color.DarkOrange)
+                    {
+                        nomorKamar = button.Text;
+                    }
+                }
+            }
+
+            return nomorKamar;
         }
     }
 }
