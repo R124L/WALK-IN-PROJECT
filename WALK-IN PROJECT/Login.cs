@@ -21,19 +21,9 @@ namespace WALK_IN_PROJECT
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void password_OnValueChanged(object sender, EventArgs e)
         {
             password.isPassword = true;
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
