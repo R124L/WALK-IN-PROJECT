@@ -9,9 +9,11 @@ namespace WALK_IN_PROJECT
 {
     class CheckInHandler
     {
+        string connectionString = "Data Source=WHO-KNOWS;Initial Catalog=hotel;Integrated Security=True;Pooling=False";
         public void TampilkanSemuaDataReservasi()
         {
             SqlConnection connection;
+
         }
     }
 }
