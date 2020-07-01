@@ -21,5 +21,17 @@ namespace WALK_IN_PROJECT
         {
 
         }
+
+        private void btnKonfirmasi_Click(object sender, EventArgs e)
+        {
+            //DataReservasi dataReservasi = new DataReservasi();
+            //dataReservasi.RemoveTabelReservasi(kodeReservasi.Text);
+            this.Close();
+        }
+
+        private void Bayar_ValueChanged(object sender, EventArgs e)
+        {
+            Kembali.Value = Bayar.Value - Harga.Value;
+        }
     }
 }

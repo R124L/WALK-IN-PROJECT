@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.kodeReservasi = new System.Windows.Forms.Label();
+            this.nama = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKonfirmasi = new System.Windows.Forms.Button();
             this.Harga = new System.Windows.Forms.NumericUpDown();
             this.Kembali = new System.Windows.Forms.NumericUpDown();
             this.Bayar = new System.Windows.Forms.NumericUpDown();
@@ -67,27 +67,27 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Atas nama";
             // 
-            // label2
+            // kodeReservasi
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(327, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "xxxxxx";
+            this.kodeReservasi.AutoSize = true;
+            this.kodeReservasi.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kodeReservasi.ForeColor = System.Drawing.Color.Red;
+            this.kodeReservasi.Location = new System.Drawing.Point(327, 19);
+            this.kodeReservasi.Name = "kodeReservasi";
+            this.kodeReservasi.Size = new System.Drawing.Size(76, 23);
+            this.kodeReservasi.TabIndex = 0;
+            this.kodeReservasi.Text = "xxxxxx";
             // 
-            // label4
+            // nama
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(162, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "xxxxxx";
+            this.nama.AutoSize = true;
+            this.nama.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nama.ForeColor = System.Drawing.Color.Red;
+            this.nama.Location = new System.Drawing.Point(162, 52);
+            this.nama.Name = "nama";
+            this.nama.Size = new System.Drawing.Size(76, 23);
+            this.nama.TabIndex = 0;
+            this.nama.Text = "xxxxxx";
             // 
             // label5
             // 
@@ -119,17 +119,18 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Kembali";
             // 
-            // button1
+            // btnKonfirmasi
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(155, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 43);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Konfirmasi";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnKonfirmasi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
+            this.btnKonfirmasi.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKonfirmasi.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnKonfirmasi.Location = new System.Drawing.Point(155, 210);
+            this.btnKonfirmasi.Name = "btnKonfirmasi";
+            this.btnKonfirmasi.Size = new System.Drawing.Size(145, 43);
+            this.btnKonfirmasi.TabIndex = 11;
+            this.btnKonfirmasi.Text = "Konfirmasi";
+            this.btnKonfirmasi.UseVisualStyleBackColor = false;
+            this.btnKonfirmasi.Click += new System.EventHandler(this.btnKonfirmasi_Click);
             // 
             // Harga
             // 
@@ -162,6 +163,11 @@
             23283064,
             0,
             0});
+            this.Kembali.Minimum = new decimal(new int[] {
+            -559939585,
+            902409669,
+            54,
+            -2147483648});
             this.Kembali.Name = "Kembali";
             this.Kembali.Size = new System.Drawing.Size(329, 26);
             this.Kembali.TabIndex = 0;
@@ -183,6 +189,7 @@
             this.Bayar.Size = new System.Drawing.Size(329, 26);
             this.Bayar.TabIndex = 0;
             this.Bayar.ThousandsSeparator = true;
+            this.Bayar.ValueChanged += new System.EventHandler(this.Bayar_ValueChanged);
             // 
             // label8
             // 
@@ -190,7 +197,7 @@
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(151, 96);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 28);
+            this.label8.Size = new System.Drawing.Size(35, 22);
             this.label8.TabIndex = 0;
             this.label8.Text = "Rp";
             // 
@@ -222,9 +229,9 @@
             this.Controls.Add(this.Kembali);
             this.Controls.Add(this.Bayar);
             this.Controls.Add(this.Harga);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnKonfirmasi);
+            this.Controls.Add(this.nama);
+            this.Controls.Add(this.kodeReservasi);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label10);
@@ -250,17 +257,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown Harga;
-        private System.Windows.Forms.NumericUpDown Kembali;
+        private System.Windows.Forms.Button btnKonfirmasi;
         private System.Windows.Forms.NumericUpDown Bayar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        internal System.Windows.Forms.Label kodeReservasi;
+        internal System.Windows.Forms.Label nama;
+        internal System.Windows.Forms.NumericUpDown Harga;
+        internal System.Windows.Forms.NumericUpDown Kembali;
     }
 }

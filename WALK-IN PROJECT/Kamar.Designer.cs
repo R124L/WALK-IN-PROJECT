@@ -100,11 +100,11 @@
             this.button70 = new System.Windows.Forms.Button();
             this.button71 = new System.Windows.Forms.Button();
             this.button72 = new System.Windows.Forms.Button();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.tglCheckIn = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.tglCheckOut = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.singelRoom = new System.Windows.Forms.CheckBox();
+            this.singleRoom = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -144,7 +144,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "101";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button2
             // 
@@ -158,6 +158,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "102";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button3
             // 
@@ -171,7 +172,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "103";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button4
             // 
@@ -185,7 +186,7 @@
             this.button4.TabIndex = 0;
             this.button4.Text = "104";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button1_Click);
+            this.button4.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button5
             // 
@@ -199,6 +200,7 @@
             this.button5.TabIndex = 0;
             this.button5.Text = "105";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button6
             // 
@@ -212,7 +214,7 @@
             this.button6.TabIndex = 0;
             this.button6.Text = "106";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button3_Click);
+            this.button6.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button7
             // 
@@ -226,7 +228,7 @@
             this.button7.TabIndex = 0;
             this.button7.Text = "107";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button1_Click);
+            this.button7.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button8
             // 
@@ -240,6 +242,7 @@
             this.button8.TabIndex = 0;
             this.button8.Text = "108";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button9
             // 
@@ -253,7 +256,7 @@
             this.button9.TabIndex = 0;
             this.button9.Text = "201";
             this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button1_Click);
+            this.button9.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button10
             // 
@@ -267,7 +270,7 @@
             this.button10.TabIndex = 0;
             this.button10.Text = "204";
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button1_Click);
+            this.button10.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button11
             // 
@@ -281,7 +284,7 @@
             this.button11.TabIndex = 0;
             this.button11.Text = "207";
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button1_Click);
+            this.button11.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button12
             // 
@@ -295,6 +298,7 @@
             this.button12.TabIndex = 0;
             this.button12.Text = "202";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button13
             // 
@@ -308,6 +312,7 @@
             this.button13.TabIndex = 0;
             this.button13.Text = "205";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button14
             // 
@@ -321,6 +326,7 @@
             this.button14.TabIndex = 0;
             this.button14.Text = "208";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button15
             // 
@@ -334,7 +340,7 @@
             this.button15.TabIndex = 0;
             this.button15.Text = "203";
             this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button3_Click);
+            this.button15.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button16
             // 
@@ -348,7 +354,7 @@
             this.button16.TabIndex = 0;
             this.button16.Text = "206";
             this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button3_Click);
+            this.button16.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button17
             // 
@@ -362,7 +368,7 @@
             this.button17.TabIndex = 0;
             this.button17.Text = "301";
             this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button1_Click);
+            this.button17.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button18
             // 
@@ -376,7 +382,7 @@
             this.button18.TabIndex = 0;
             this.button18.Text = "304";
             this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.button1_Click);
+            this.button18.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button19
             // 
@@ -390,7 +396,7 @@
             this.button19.TabIndex = 0;
             this.button19.Text = "307";
             this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button1_Click);
+            this.button19.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button20
             // 
@@ -404,6 +410,7 @@
             this.button20.TabIndex = 0;
             this.button20.Text = "302";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button21
             // 
@@ -417,6 +424,7 @@
             this.button21.TabIndex = 0;
             this.button21.Text = "305";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button22
             // 
@@ -430,6 +438,7 @@
             this.button22.TabIndex = 0;
             this.button22.Text = "308";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button23
             // 
@@ -443,7 +452,7 @@
             this.button23.TabIndex = 0;
             this.button23.Text = "303";
             this.button23.UseVisualStyleBackColor = false;
-            this.button23.Click += new System.EventHandler(this.button3_Click);
+            this.button23.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button24
             // 
@@ -457,7 +466,7 @@
             this.button24.TabIndex = 0;
             this.button24.Text = "306";
             this.button24.UseVisualStyleBackColor = false;
-            this.button24.Click += new System.EventHandler(this.button3_Click);
+            this.button24.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button25
             // 
@@ -471,7 +480,7 @@
             this.button25.TabIndex = 0;
             this.button25.Text = "401";
             this.button25.UseVisualStyleBackColor = false;
-            this.button25.Click += new System.EventHandler(this.button1_Click);
+            this.button25.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button26
             // 
@@ -485,7 +494,7 @@
             this.button26.TabIndex = 0;
             this.button26.Text = "404";
             this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button1_Click);
+            this.button26.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button27
             // 
@@ -499,7 +508,7 @@
             this.button27.TabIndex = 0;
             this.button27.Text = "407";
             this.button27.UseVisualStyleBackColor = false;
-            this.button27.Click += new System.EventHandler(this.button1_Click);
+            this.button27.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button28
             // 
@@ -513,6 +522,7 @@
             this.button28.TabIndex = 0;
             this.button28.Text = "402";
             this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button29
             // 
@@ -526,6 +536,7 @@
             this.button29.TabIndex = 0;
             this.button29.Text = "405";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button30
             // 
@@ -539,6 +550,7 @@
             this.button30.TabIndex = 0;
             this.button30.Text = "408";
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button31
             // 
@@ -552,7 +564,7 @@
             this.button31.TabIndex = 0;
             this.button31.Text = "403";
             this.button31.UseVisualStyleBackColor = false;
-            this.button31.Click += new System.EventHandler(this.button3_Click);
+            this.button31.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button32
             // 
@@ -566,7 +578,7 @@
             this.button32.TabIndex = 0;
             this.button32.Text = "406";
             this.button32.UseVisualStyleBackColor = false;
-            this.button32.Click += new System.EventHandler(this.button3_Click);
+            this.button32.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button33
             // 
@@ -580,7 +592,7 @@
             this.button33.TabIndex = 0;
             this.button33.Text = "501";
             this.button33.UseVisualStyleBackColor = false;
-            this.button33.Click += new System.EventHandler(this.button1_Click);
+            this.button33.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button34
             // 
@@ -594,7 +606,7 @@
             this.button34.TabIndex = 0;
             this.button34.Text = "504";
             this.button34.UseVisualStyleBackColor = false;
-            this.button34.Click += new System.EventHandler(this.button1_Click);
+            this.button34.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button35
             // 
@@ -608,7 +620,7 @@
             this.button35.TabIndex = 0;
             this.button35.Text = "507";
             this.button35.UseVisualStyleBackColor = false;
-            this.button35.Click += new System.EventHandler(this.button1_Click);
+            this.button35.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button36
             // 
@@ -622,7 +634,7 @@
             this.button36.TabIndex = 0;
             this.button36.Text = "502";
             this.button36.UseVisualStyleBackColor = false;
-            this.button36.Click += new System.EventHandler(this.button36_Click);
+            this.button36.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button37
             // 
@@ -636,6 +648,7 @@
             this.button37.TabIndex = 0;
             this.button37.Text = "505";
             this.button37.UseVisualStyleBackColor = false;
+            this.button37.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button38
             // 
@@ -649,6 +662,7 @@
             this.button38.TabIndex = 0;
             this.button38.Text = "508";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button39
             // 
@@ -662,7 +676,7 @@
             this.button39.TabIndex = 0;
             this.button39.Text = "503";
             this.button39.UseVisualStyleBackColor = false;
-            this.button39.Click += new System.EventHandler(this.button3_Click);
+            this.button39.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button40
             // 
@@ -676,7 +690,7 @@
             this.button40.TabIndex = 0;
             this.button40.Text = "506";
             this.button40.UseVisualStyleBackColor = false;
-            this.button40.Click += new System.EventHandler(this.button3_Click);
+            this.button40.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button41
             // 
@@ -690,7 +704,7 @@
             this.button41.TabIndex = 0;
             this.button41.Text = "601";
             this.button41.UseVisualStyleBackColor = false;
-            this.button41.Click += new System.EventHandler(this.button1_Click);
+            this.button41.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button42
             // 
@@ -704,7 +718,7 @@
             this.button42.TabIndex = 0;
             this.button42.Text = "604";
             this.button42.UseVisualStyleBackColor = false;
-            this.button42.Click += new System.EventHandler(this.button1_Click);
+            this.button42.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button43
             // 
@@ -718,7 +732,7 @@
             this.button43.TabIndex = 0;
             this.button43.Text = "607";
             this.button43.UseVisualStyleBackColor = false;
-            this.button43.Click += new System.EventHandler(this.button1_Click);
+            this.button43.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button44
             // 
@@ -732,6 +746,7 @@
             this.button44.TabIndex = 0;
             this.button44.Text = "602";
             this.button44.UseVisualStyleBackColor = false;
+            this.button44.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button45
             // 
@@ -745,6 +760,7 @@
             this.button45.TabIndex = 0;
             this.button45.Text = "605";
             this.button45.UseVisualStyleBackColor = false;
+            this.button45.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button46
             // 
@@ -758,6 +774,7 @@
             this.button46.TabIndex = 0;
             this.button46.Text = "608";
             this.button46.UseVisualStyleBackColor = false;
+            this.button46.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button47
             // 
@@ -771,7 +788,7 @@
             this.button47.TabIndex = 0;
             this.button47.Text = "603";
             this.button47.UseVisualStyleBackColor = false;
-            this.button47.Click += new System.EventHandler(this.button3_Click);
+            this.button47.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button48
             // 
@@ -785,7 +802,7 @@
             this.button48.TabIndex = 0;
             this.button48.Text = "606";
             this.button48.UseVisualStyleBackColor = false;
-            this.button48.Click += new System.EventHandler(this.button3_Click);
+            this.button48.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button49
             // 
@@ -799,7 +816,7 @@
             this.button49.TabIndex = 0;
             this.button49.Text = "701";
             this.button49.UseVisualStyleBackColor = false;
-            this.button49.Click += new System.EventHandler(this.button1_Click);
+            this.button49.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button50
             // 
@@ -813,7 +830,7 @@
             this.button50.TabIndex = 0;
             this.button50.Text = "704";
             this.button50.UseVisualStyleBackColor = false;
-            this.button50.Click += new System.EventHandler(this.button1_Click);
+            this.button50.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button51
             // 
@@ -827,7 +844,7 @@
             this.button51.TabIndex = 0;
             this.button51.Text = "707";
             this.button51.UseVisualStyleBackColor = false;
-            this.button51.Click += new System.EventHandler(this.button1_Click);
+            this.button51.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button52
             // 
@@ -841,6 +858,7 @@
             this.button52.TabIndex = 0;
             this.button52.Text = "702";
             this.button52.UseVisualStyleBackColor = false;
+            this.button52.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button53
             // 
@@ -854,6 +872,7 @@
             this.button53.TabIndex = 0;
             this.button53.Text = "705";
             this.button53.UseVisualStyleBackColor = false;
+            this.button53.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button54
             // 
@@ -867,6 +886,7 @@
             this.button54.TabIndex = 0;
             this.button54.Text = "708";
             this.button54.UseVisualStyleBackColor = false;
+            this.button54.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button55
             // 
@@ -880,7 +900,7 @@
             this.button55.TabIndex = 0;
             this.button55.Text = "703";
             this.button55.UseVisualStyleBackColor = false;
-            this.button55.Click += new System.EventHandler(this.button3_Click);
+            this.button55.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button56
             // 
@@ -894,7 +914,7 @@
             this.button56.TabIndex = 0;
             this.button56.Text = "706";
             this.button56.UseVisualStyleBackColor = false;
-            this.button56.Click += new System.EventHandler(this.button3_Click);
+            this.button56.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button57
             // 
@@ -908,7 +928,7 @@
             this.button57.TabIndex = 0;
             this.button57.Text = "901";
             this.button57.UseVisualStyleBackColor = false;
-            this.button57.Click += new System.EventHandler(this.button1_Click);
+            this.button57.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button58
             // 
@@ -922,7 +942,7 @@
             this.button58.TabIndex = 0;
             this.button58.Text = "904";
             this.button58.UseVisualStyleBackColor = false;
-            this.button58.Click += new System.EventHandler(this.button1_Click);
+            this.button58.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button59
             // 
@@ -936,7 +956,7 @@
             this.button59.TabIndex = 0;
             this.button59.Text = "907";
             this.button59.UseVisualStyleBackColor = false;
-            this.button59.Click += new System.EventHandler(this.button1_Click);
+            this.button59.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button60
             // 
@@ -950,6 +970,7 @@
             this.button60.TabIndex = 0;
             this.button60.Text = "902";
             this.button60.UseVisualStyleBackColor = false;
+            this.button60.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button61
             // 
@@ -963,6 +984,7 @@
             this.button61.TabIndex = 0;
             this.button61.Text = "905";
             this.button61.UseVisualStyleBackColor = false;
+            this.button61.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button62
             // 
@@ -976,6 +998,7 @@
             this.button62.TabIndex = 0;
             this.button62.Text = "908";
             this.button62.UseVisualStyleBackColor = false;
+            this.button62.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button63
             // 
@@ -989,7 +1012,7 @@
             this.button63.TabIndex = 0;
             this.button63.Text = "903";
             this.button63.UseVisualStyleBackColor = false;
-            this.button63.Click += new System.EventHandler(this.button3_Click);
+            this.button63.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button64
             // 
@@ -1003,7 +1026,7 @@
             this.button64.TabIndex = 0;
             this.button64.Text = "906";
             this.button64.UseVisualStyleBackColor = false;
-            this.button64.Click += new System.EventHandler(this.button3_Click);
+            this.button64.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button65
             // 
@@ -1017,7 +1040,7 @@
             this.button65.TabIndex = 0;
             this.button65.Text = "801";
             this.button65.UseVisualStyleBackColor = false;
-            this.button65.Click += new System.EventHandler(this.button1_Click);
+            this.button65.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button66
             // 
@@ -1031,7 +1054,7 @@
             this.button66.TabIndex = 0;
             this.button66.Text = "804";
             this.button66.UseVisualStyleBackColor = false;
-            this.button66.Click += new System.EventHandler(this.button1_Click);
+            this.button66.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button67
             // 
@@ -1045,7 +1068,7 @@
             this.button67.TabIndex = 0;
             this.button67.Text = "807";
             this.button67.UseVisualStyleBackColor = false;
-            this.button67.Click += new System.EventHandler(this.button1_Click);
+            this.button67.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button68
             // 
@@ -1059,6 +1082,7 @@
             this.button68.TabIndex = 0;
             this.button68.Text = "802";
             this.button68.UseVisualStyleBackColor = false;
+            this.button68.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button69
             // 
@@ -1072,6 +1096,7 @@
             this.button69.TabIndex = 0;
             this.button69.Text = "805";
             this.button69.UseVisualStyleBackColor = false;
+            this.button69.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button70
             // 
@@ -1085,6 +1110,7 @@
             this.button70.TabIndex = 0;
             this.button70.Text = "808";
             this.button70.UseVisualStyleBackColor = false;
+            this.button70.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button71
             // 
@@ -1098,7 +1124,7 @@
             this.button71.TabIndex = 0;
             this.button71.Text = "803";
             this.button71.UseVisualStyleBackColor = false;
-            this.button71.Click += new System.EventHandler(this.button3_Click);
+            this.button71.Click += new System.EventHandler(this.kamar_Click);
             // 
             // button72
             // 
@@ -1112,21 +1138,21 @@
             this.button72.TabIndex = 0;
             this.button72.Text = "806";
             this.button72.UseVisualStyleBackColor = false;
-            this.button72.Click += new System.EventHandler(this.button3_Click);
+            this.button72.Click += new System.EventHandler(this.kamar_Click);
             // 
-            // bunifuDatepicker1
+            // tglCheckIn
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.DarkCyan;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(64, 78);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(394, 36);
-            this.bunifuDatepicker1.TabIndex = 1;
-            this.bunifuDatepicker1.Value = new System.DateTime(2020, 6, 28, 16, 6, 24, 402);
+            this.tglCheckIn.BackColor = System.Drawing.Color.DarkCyan;
+            this.tglCheckIn.BorderRadius = 0;
+            this.tglCheckIn.ForeColor = System.Drawing.Color.White;
+            this.tglCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.tglCheckIn.FormatCustom = null;
+            this.tglCheckIn.Location = new System.Drawing.Point(64, 78);
+            this.tglCheckIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tglCheckIn.Name = "tglCheckIn";
+            this.tglCheckIn.Size = new System.Drawing.Size(394, 36);
+            this.tglCheckIn.TabIndex = 1;
+            this.tglCheckIn.Value = new System.DateTime(2020, 6, 28, 16, 6, 24, 402);
             // 
             // label1
             // 
@@ -1137,22 +1163,20 @@
             this.label1.Size = new System.Drawing.Size(120, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Check-In";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // bunifuDatepicker2
+            // tglCheckOut
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.DarkCyan;
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(464, 78);
-            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(394, 36);
-            this.bunifuDatepicker2.TabIndex = 1;
-            this.bunifuDatepicker2.Value = new System.DateTime(2020, 6, 28, 16, 6, 24, 402);
-            this.bunifuDatepicker2.onValueChanged += new System.EventHandler(this.bunifuDatepicker2_onValueChanged);
+            this.tglCheckOut.BackColor = System.Drawing.Color.DarkCyan;
+            this.tglCheckOut.BorderRadius = 0;
+            this.tglCheckOut.ForeColor = System.Drawing.Color.White;
+            this.tglCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.tglCheckOut.FormatCustom = null;
+            this.tglCheckOut.Location = new System.Drawing.Point(464, 78);
+            this.tglCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tglCheckOut.Name = "tglCheckOut";
+            this.tglCheckOut.Size = new System.Drawing.Size(394, 36);
+            this.tglCheckOut.TabIndex = 1;
+            this.tglCheckOut.Value = new System.DateTime(2020, 6, 28, 16, 6, 24, 402);
             // 
             // label2
             // 
@@ -1163,22 +1187,21 @@
             this.label2.Size = new System.Drawing.Size(140, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Check-Out";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // singelRoom
+            // singleRoom
             // 
-            this.singelRoom.AutoSize = true;
-            this.singelRoom.Checked = true;
-            this.singelRoom.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.singelRoom.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.singelRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(64)))), ((int)(((byte)(85)))));
-            this.singelRoom.Location = new System.Drawing.Point(891, 44);
-            this.singelRoom.Name = "singelRoom";
-            this.singelRoom.Size = new System.Drawing.Size(153, 27);
-            this.singelRoom.TabIndex = 3;
-            this.singelRoom.Text = "Singel Room";
-            this.singelRoom.UseVisualStyleBackColor = true;
-            this.singelRoom.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.singleRoom.AutoSize = true;
+            this.singleRoom.Checked = true;
+            this.singleRoom.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.singleRoom.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.singleRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(64)))), ((int)(((byte)(85)))));
+            this.singleRoom.Location = new System.Drawing.Point(891, 44);
+            this.singleRoom.Name = "singleRoom";
+            this.singleRoom.Size = new System.Drawing.Size(153, 27);
+            this.singleRoom.TabIndex = 3;
+            this.singleRoom.Text = "Single Room";
+            this.singleRoom.UseVisualStyleBackColor = true;
+            this.singleRoom.CheckedChanged += new System.EventHandler(this.tipeKamar_CheckedChanged);
             // 
             // panel1
             // 
@@ -1192,7 +1215,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 162);
             this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label15
             // 
@@ -1205,7 +1227,6 @@
             this.label15.Size = new System.Drawing.Size(125, 23);
             this.label15.TabIndex = 7;
             this.label15.Text = "Rp    275.000";
-            this.label15.Click += new System.EventHandler(this.label6_Click);
             // 
             // label6
             // 
@@ -1216,7 +1237,6 @@
             this.label6.Size = new System.Drawing.Size(133, 22);
             this.label6.TabIndex = 7;
             this.label6.Text = "Kamar Mandi";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -1237,7 +1257,6 @@
             this.label4.Size = new System.Drawing.Size(142, 22);
             this.label4.TabIndex = 7;
             this.label4.Text = "1 Tempat tidur";
-            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label3
             // 
@@ -1262,7 +1281,7 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Twin Room";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.tipeKamar_CheckedChanged);
             // 
             // panel2
             // 
@@ -1276,7 +1295,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(198, 157);
             this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label16
             // 
@@ -1289,7 +1307,6 @@
             this.label16.Size = new System.Drawing.Size(125, 23);
             this.label16.TabIndex = 7;
             this.label16.Text = "Rp    295.000";
-            this.label16.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -1320,7 +1337,6 @@
             this.label9.Size = new System.Drawing.Size(142, 22);
             this.label9.TabIndex = 7;
             this.label9.Text = "2 Tempat tidur";
-            this.label9.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label10
             // 
@@ -1345,7 +1361,7 @@
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "Double Room";
             this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.tipeKamar_CheckedChanged);
             // 
             // panel3
             // 
@@ -1360,7 +1376,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(198, 189);
             this.panel3.TabIndex = 6;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label17
             // 
@@ -1373,7 +1388,6 @@
             this.label17.Size = new System.Drawing.Size(130, 23);
             this.label17.TabIndex = 7;
             this.label17.Text = "Rp     312.000";
-            this.label17.Click += new System.EventHandler(this.label6_Click);
             // 
             // label18
             // 
@@ -1414,7 +1428,6 @@
             this.label13.Size = new System.Drawing.Size(117, 22);
             this.label13.TabIndex = 7;
             this.label13.Text = "Double Bed";
-            this.label13.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label14
             // 
@@ -1450,11 +1463,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.singelRoom);
+            this.Controls.Add(this.singleRoom);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.bunifuDatepicker2);
+            this.Controls.Add(this.tglCheckOut);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuDatepicker1);
+            this.Controls.Add(this.tglCheckIn);
             this.Controls.Add(this.button72);
             this.Controls.Add(this.button64);
             this.Controls.Add(this.button56);
@@ -1615,11 +1628,11 @@
         private System.Windows.Forms.Button button70;
         private System.Windows.Forms.Button button71;
         private System.Windows.Forms.Button button72;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuDatepicker tglCheckIn;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
+        private Bunifu.Framework.UI.BunifuDatepicker tglCheckOut;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox singelRoom;
+        private System.Windows.Forms.CheckBox singleRoom;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
