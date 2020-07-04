@@ -66,7 +66,6 @@
             this.noId.Name = "noId";
             this.noId.Size = new System.Drawing.Size(278, 30);
             this.noId.TabIndex = 1;
-            this.noId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -85,7 +84,6 @@
             this.nama.Name = "nama";
             this.nama.Size = new System.Drawing.Size(278, 30);
             this.nama.TabIndex = 2;
-            this.nama.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -104,7 +102,6 @@
             this.alamat.Name = "alamat";
             this.alamat.Size = new System.Drawing.Size(278, 30);
             this.alamat.TabIndex = 3;
-            this.alamat.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -123,7 +120,6 @@
             this.telp.Name = "telp";
             this.telp.Size = new System.Drawing.Size(278, 30);
             this.telp.TabIndex = 4;
-            this.telp.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
@@ -142,7 +138,6 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(278, 30);
             this.email.TabIndex = 5;
-            this.email.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label6
             // 
@@ -272,7 +267,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "HOTEL CALIFORNIA";
-            this.Load += new System.EventHandler(this.Reservasi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

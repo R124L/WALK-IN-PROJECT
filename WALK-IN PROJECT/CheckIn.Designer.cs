@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckIn));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kodeReservasi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.niIdentitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.checkInTable = new System.Windows.Forms.DataGridView();
+            this.btnCkeckIn = new System.Windows.Forms.Button();
+            this.btnCancell = new System.Windows.Forms.Button();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkInTable)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,67 +43,50 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(461, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 52);
+            this.label1.Size = new System.Drawing.Size(192, 51);
             this.label1.TabIndex = 2;
             this.label1.Text = "Check In";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // checkInTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kodeReservasi,
-            this.niIdentitas});
-            this.dataGridView1.Location = new System.Drawing.Point(71, 146);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 40;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1007, 421);
-            this.dataGridView1.TabIndex = 4;
+            this.checkInTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.checkInTable.Location = new System.Drawing.Point(71, 146);
+            this.checkInTable.Name = "checkInTable";
+            this.checkInTable.RowHeadersWidth = 40;
+            this.checkInTable.RowTemplate.Height = 24;
+            this.checkInTable.Size = new System.Drawing.Size(987, 441);
+            this.checkInTable.TabIndex = 4;
+            this.checkInTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // kodeReservasi
+            // btnCkeckIn
             // 
-            this.kodeReservasi.HeaderText = "Kode Reservasi";
-            this.kodeReservasi.MinimumWidth = 6;
-            this.kodeReservasi.Name = "kodeReservasi";
-            this.kodeReservasi.Width = 125;
+            this.btnCkeckIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
+            this.btnCkeckIn.FlatAppearance.BorderSize = 0;
+            this.btnCkeckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCkeckIn.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCkeckIn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCkeckIn.Location = new System.Drawing.Point(333, 609);
+            this.btnCkeckIn.Name = "btnCkeckIn";
+            this.btnCkeckIn.Size = new System.Drawing.Size(183, 53);
+            this.btnCkeckIn.TabIndex = 12;
+            this.btnCkeckIn.Text = "Check-In";
+            this.btnCkeckIn.UseVisualStyleBackColor = false;
+            this.btnCkeckIn.Click += new System.EventHandler(this.btnCkeckIn_Click);
             // 
-            // niIdentitas
+            // btnCancell
             // 
-            this.niIdentitas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.niIdentitas.HeaderText = "No Identitas";
-            this.niIdentitas.MinimumWidth = 6;
-            this.niIdentitas.Name = "niIdentitas";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(161)))), ((int)(((byte)(95)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(333, 609);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 53);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Check-In";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(596, 609);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 53);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Cancell";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancell.BackColor = System.Drawing.Color.Red;
+            this.btnCancell.FlatAppearance.BorderSize = 0;
+            this.btnCancell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancell.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancell.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancell.Location = new System.Drawing.Point(596, 609);
+            this.btnCancell.Name = "btnCancell";
+            this.btnCancell.Size = new System.Drawing.Size(183, 53);
+            this.btnCancell.TabIndex = 12;
+            this.btnCancell.Text = "Cancell";
+            this.btnCancell.UseVisualStyleBackColor = false;
+            this.btnCancell.Click += new System.EventHandler(this.btnCancell_Click);
             // 
             // bunifuTextbox1
             // 
@@ -120,21 +101,20 @@
             this.bunifuTextbox1.Size = new System.Drawing.Size(285, 33);
             this.bunifuTextbox1.TabIndex = 5;
             this.bunifuTextbox1.text = "Search...";
-            this.bunifuTextbox1.OnTextChange += new System.EventHandler(this.bunifuTextbox1_OnTextChange);
             // 
             // CheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancell);
+            this.Controls.Add(this.btnCkeckIn);
             this.Controls.Add(this.bunifuTextbox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.checkInTable);
             this.Controls.Add(this.label1);
             this.Name = "CheckIn";
-            this.Size = new System.Drawing.Size(1150, 708);
+            this.Size = new System.Drawing.Size(1144, 719);
             this.Load += new System.EventHandler(this.CheckIn_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkInTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,11 +123,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kodeReservasi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn niIdentitas;
+        private System.Windows.Forms.DataGridView checkInTable;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCkeckIn;
+        private System.Windows.Forms.Button btnCancell;
     }
 }

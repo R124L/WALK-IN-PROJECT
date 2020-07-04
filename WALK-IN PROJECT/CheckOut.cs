@@ -21,6 +21,7 @@ namespace WALK_IN_PROJECT
                 return _instance;
             }
         }
+        QueryHandler queryHandler = new QueryHandler();
 
         public CheckOut()
         {
@@ -29,7 +30,19 @@ namespace WALK_IN_PROJECT
 
         private void CheckOut_Load(object sender, EventArgs e)
         {
+            tabelCheckOut.DataSource = queryHandler.ShowTamu();
+        }
 
+        private void tabelCheckOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            string noKamar = tabelCheckOut.SelectedCells[3].Value.ToString();
+            queryHandler.CheckOut(noKamar);
+            tabelCheckOut.DataSource = queryHandler.ShowTamu();
         }
     }
 }

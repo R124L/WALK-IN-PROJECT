@@ -17,20 +17,6 @@ namespace WALK_IN_PROJECT
             InitializeComponent();
         }
 
-        private void Reservasi_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void kirim_Click(object sender, EventArgs e)
         {
             DataReservasi dataReservasi = new DataReservasi();
