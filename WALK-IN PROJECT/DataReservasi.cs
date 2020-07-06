@@ -68,6 +68,9 @@ namespace WALK_IN_PROJECT
         }
         public int ShowHarga(string noKamar)
         {
+            Kamar kamar = new Kamar();
+            DateTime date1 = kamar.tglCheckIn.Value;
+            DateTime date2 = kamar.tglCheckOut.Value;
             string query = "SELECT Harga FROM Kamar WHERE NoKamar = @noKamar;";
             int harga = 0;
 
@@ -78,9 +81,10 @@ namespace WALK_IN_PROJECT
                 command.Parameters.AddWithValue("@noKamar", noKamar);
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
+                    int lamaMenginap = (int)date2.Subtract(date1).TotalDays;
                     while (reader.Read())
                     {
-                        harga = Convert.ToInt32(reader["Harga"]); 
+                        harga = Convert.ToInt32(reader["Harga"]) * lamaMenginap; 
                     }
                     return harga;
                 }

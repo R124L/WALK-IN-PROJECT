@@ -1628,9 +1628,7 @@
         private System.Windows.Forms.Button button70;
         private System.Windows.Forms.Button button71;
         private System.Windows.Forms.Button button72;
-        private Bunifu.Framework.UI.BunifuDatepicker tglCheckIn;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuDatepicker tglCheckOut;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox singleRoom;
         private System.Windows.Forms.Panel panel1;
@@ -1655,5 +1653,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button book;
+        internal Bunifu.Framework.UI.BunifuDatepicker tglCheckIn;
+        internal Bunifu.Framework.UI.BunifuDatepicker tglCheckOut;
     }
 }
