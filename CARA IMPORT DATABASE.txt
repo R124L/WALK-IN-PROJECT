@@ -6,3 +6,6 @@
 6. Pada import settings, pilih file database dengan mengklik tombol browser
    -file (hotel.bacpac) database berada diatas sln file
 7. Klik NEXT 2X
+
+
+#JANGAN LUPA SESUAIKAN CONNECTION STRINGNYA
