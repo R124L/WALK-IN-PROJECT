@@ -51,6 +51,8 @@ namespace WALK_IN_PROJECT
 
             Reservasi reservasi = new Reservasi();
             reservasi.nomorKamar.Text = nomorKamar;
+            reservasi.tglCheckIn.Value = checkIn;
+            reservasi.tglCheckOut.Value = checkOut;
             reservasi.ShowDialog();
             roomHandler.ColorTersedia(this);
             foreach (Control control in Controls)

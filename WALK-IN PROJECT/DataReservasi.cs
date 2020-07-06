@@ -14,8 +14,9 @@ namespace WALK_IN_PROJECT
 
         public void InsertDataKamar(DateTime checkIn, DateTime checkOut, string noKamar)
         {
-            string query = "INSERT INTO Tamu (NoIdTamu, CheckIn, CheckOut, NoKamar, Status) VALUES (@idSementara, @checkIn, @checkOut, @noKamar, 'Reservasi');";
+            string query = "INSERT INTO Tamu (NoIdTamu, CheckIn, CheckOut, NoKamar, Status, Biaya) VALUES (@idSementara, @checkIn, @checkOut, @noKamar, 'Reservasi', @Biaya);";
 
+            int jumlahHari = (int)checkOut.Subtract(checkIn).TotalDays;
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -24,6 +25,7 @@ namespace WALK_IN_PROJECT
                 command.Parameters.AddWithValue("@checkIn", checkIn);
                 command.Parameters.AddWithValue("@checkOut", checkOut);
                 command.Parameters.AddWithValue("@noKamar", noKamar);
+                command.Parameters.AddWithValue("@Biaya", ShowHarga(noKamar, jumlahHari));
                 command.ExecuteNonQuery();
             }
         }
@@ -66,11 +68,8 @@ namespace WALK_IN_PROJECT
                 command.ExecuteNonQuery();
             }
         }
-        public int ShowHarga(string noKamar)
+        public int ShowHarga(string noKamar, int jumlahHari)
         {
-            Kamar kamar = new Kamar();
-            DateTime date1 = kamar.tglCheckIn.Value;
-            DateTime date2 = kamar.tglCheckOut.Value;
             string query = "SELECT Harga FROM Kamar WHERE NoKamar = @noKamar;";
             int harga = 0;
 
@@ -81,7 +80,7 @@ namespace WALK_IN_PROJECT
                 command.Parameters.AddWithValue("@noKamar", noKamar);
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    int lamaMenginap = (int)date2.Subtract(date1).TotalDays;
+                    int lamaMenginap = jumlahHari;
                     while (reader.Read())
                     {
                         harga = Convert.ToInt32(reader["Harga"]) * lamaMenginap; 

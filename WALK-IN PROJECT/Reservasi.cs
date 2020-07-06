@@ -45,7 +45,9 @@ namespace WALK_IN_PROJECT
             dataReservasi.InsertTabelTamu(noId.Text, nama.Text, alamat.Text, telp.Text, email.Text, pengenal, nomorKamar.Text);
             dataReservasi.InsertTabelReservasi(kodeReservasi, noId.Text, "Rizal Iswandy");
             dataReservasi.UpdateKetersediaanKamar(nomorKamar.Text, "False");
-            MessageBox.Show($"Terimakasih telah melakukan reservasi dengan: \nKode Reservasi {kodeReservasi}, atas nama {nama.Text}. \nHarga\t: {dataReservasi.ShowHarga(nomorKamar.Text)}", "RESERVASI SUKSES!");
+            DateTime checkIn = Convert.ToDateTime($"{tglCheckIn.Value:yyyy-MM-dd}");
+            DateTime checkOut = Convert.ToDateTime($"{tglCheckOut.Value:yyyy-MM-dd}");
+            MessageBox.Show($"Terimakasih telah melakukan reservasi dengan: \nKode Reservasi {kodeReservasi}, atas nama {nama.Text}. \nHarga\t: {dataReservasi.ShowHarga(nomorKamar.Text, (int)checkOut.Subtract(checkIn).TotalDays)}", "RESERVASI SUKSES!");
             this.Close();
         }
     }

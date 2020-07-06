@@ -35,8 +35,8 @@ namespace WALK_IN_PROJECT
 
         public DataTable ShowReservasi()
         {
-            string query = "SELECT KodeReservasi,Reservasi.NoIdTamu, Nama, CheckIn,CheckOut, Tamu.NoKamar, Harga FROM Reservasi " +
-                "INNER JOIN Tamu ON Reservasi.NoIdTamu = Tamu.NoIdTamu " +
+            string query = "SELECT KodeReservasi,Reservasi.NoIdTamu, Nama, CheckIn,CheckOut, Tamu.NoKamar, Biaya " +
+                "FROM Reservasi INNER JOIN Tamu ON Reservasi.NoIdTamu = Tamu.NoIdTamu " +
                 "INNER JOIN Kamar ON Tamu.NoKamar = Kamar.NoKamar; ";
 
             using (connection = new SqlConnection(connectionString))

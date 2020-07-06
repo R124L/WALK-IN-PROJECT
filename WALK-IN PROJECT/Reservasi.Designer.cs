@@ -47,6 +47,8 @@
             this.judul = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.nomorKamar = new System.Windows.Forms.Label();
+            this.tglCheckIn = new System.Windows.Forms.DateTimePicker();
+            this.tglCheckOut = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -239,11 +241,29 @@
             this.nomorKamar.Text = "000";
             this.nomorKamar.Visible = false;
             // 
+            // tglCheckIn
+            // 
+            this.tglCheckIn.Location = new System.Drawing.Point(33, 377);
+            this.tglCheckIn.Name = "tglCheckIn";
+            this.tglCheckIn.Size = new System.Drawing.Size(95, 22);
+            this.tglCheckIn.TabIndex = 11;
+            this.tglCheckIn.Visible = false;
+            // 
+            // tglCheckOut
+            // 
+            this.tglCheckOut.Location = new System.Drawing.Point(33, 405);
+            this.tglCheckOut.Name = "tglCheckOut";
+            this.tglCheckOut.Size = new System.Drawing.Size(95, 22);
+            this.tglCheckOut.TabIndex = 11;
+            this.tglCheckOut.Visible = false;
+            // 
             // Reservasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 496);
+            this.ClientSize = new System.Drawing.Size(488, 493);
+            this.Controls.Add(this.tglCheckOut);
+            this.Controls.Add(this.tglCheckIn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.kirim);
             this.Controls.Add(this.kartuPelajar);
@@ -293,5 +313,7 @@
         private System.Windows.Forms.Label judul;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label nomorKamar;
+        internal System.Windows.Forms.DateTimePicker tglCheckIn;
+        internal System.Windows.Forms.DateTimePicker tglCheckOut;
     }
 }
