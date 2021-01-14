@@ -14,7 +14,7 @@ namespace WALK_IN_PROJECT
     public partial class Login : Form
     {
         SqlConnection connection;
-        string connectionString = "Data Source=WHO-KNOWS;Initial Catalog=hotel;Integrated Security=True;Pooling=False";
+        string connectionString = "Data Source=WHO-KNOWS;Initial Catalog=hotel;Integrated Security=True";
 
         public Login()
         {
@@ -67,6 +67,11 @@ namespace WALK_IN_PROJECT
             {
                 MessageBox.Show(ex.Message,"Informasi");
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
