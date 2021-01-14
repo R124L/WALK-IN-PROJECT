@@ -17,7 +17,6 @@ namespace WALK_IN_PROJECT
 
         public void ColorTersedia(Control form)
         {
-
             foreach (Control control in form.Controls)
             {
                 if (control is Button)

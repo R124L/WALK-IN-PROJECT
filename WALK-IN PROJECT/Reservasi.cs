@@ -50,5 +50,10 @@ namespace WALK_IN_PROJECT
             MessageBox.Show($"Terimakasih telah melakukan reservasi dengan: \nKode Reservasi {kodeReservasi}, atas nama {nama.Text}. \nHarga\t: {dataReservasi.ShowHarga(nomorKamar.Text, (int)checkOut.Subtract(checkIn).TotalDays)}", "RESERVASI SUKSES!");
             this.Close();
         }
+
+        private void Reservasi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

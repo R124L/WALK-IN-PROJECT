@@ -287,6 +287,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "HOTEL CALIFORNIA";
+            this.Load += new System.EventHandler(this.Reservasi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
